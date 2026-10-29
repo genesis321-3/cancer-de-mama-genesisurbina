@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cáncer de mama: detectarlo a tiempo salva vidas</title>
+<meta name="author" content="Genesis Jarelly Urbina Calderon">
+<meta name="description" content="Qué es el cáncer de mama, señales de alerta, cómo detectarlo a tiempo y mitos frecuentes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3a1d3f; --rosa:#d9427a; --rosa-osc:#a82a5b; --blush:#fff1f5;
+  --teal:#1d6f6a; --ink:#2b1c2e; --gris:#6b5a6e; --linea:#ecd3dc;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:1.1rem/1.65 var(--sans);color:var(--ink);background:#fff}
+a{color:var(--rosa-osc)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);color:var(--plum);margin-bottom:1rem}
+p{max-width:40rem;margin:0 0 1rem}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.95);border-bottom:1px solid var(--linea)}
+nav .wrap{display:flex;gap:1.25rem;overflow-x:auto;padding-top:.7rem;padding-bottom:.7rem;white-space:nowrap}
+nav a{text-decoration:none;color:var(--plum);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--rosa-osc);text-decoration:underline}
+
+.hero{background:var(--plum);color:#fff;padding:4rem 0 4.5rem;overflow:hidden}
+.hero .wrap{display:grid;gap:2rem;align-items:center;grid-template-columns:1.4fr 1fr}
+.hero h1{font-size:clamp(2.3rem,6.5vw,4.4rem);font-weight:700}
+.hero p{font-size:1.25rem;color:#f4dbe6;margin-top:1.2rem}
+.hero svg{width:100%;max-width:300px;justify-self:center;animation:late 4s ease-in-out infinite}
+@keyframes late{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.btn{display:inline-block;margin-top:.8rem;background:var(--rosa);color:#fff;padding:.75rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none}
+.btn:hover{background:var(--rosa-osc)}
+
+section{padding:3.5rem 0}
+.tinte{background:var(--blush)}
+
+.datos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.datos div{border-left:4px solid var(--rosa);padding-left:1rem}
+.datos b{display:block;font:700 2.4rem/1 var(--serif);color:var(--rosa-osc)}
+.datos span{font-size:.98rem;color:var(--gris)}
+
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+ul.senales{list-style:none;padding:0;margin:0}
+ul.senales li{padding:.65rem 0 .65rem 1.8rem;border-bottom:1px solid var(--linea);position:relative}
+ul.senales li::before{content:"";position:absolute;left:0;top:1.15rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--rosa)}
+.aviso{background:#fff;border:2px solid var(--teal);border-radius:.6rem;padding:1rem 1.2rem;margin-top:1.2rem}
+.aviso strong{color:var(--teal)}
+
+ol.pasos{counter-reset:p;list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:1rem}
+ol.pasos li{counter-increment:p;display:grid;grid-template-columns:3rem 1fr;gap:1rem;align-items:start}
+ol.pasos li::before{content:counter(p);font:700 1.5rem/3rem var(--serif);width:3rem;height:3rem;text-align:center;border-radius:50%;background:var(--plum);color:#fff}
+ol.pasos b{color:var(--plum)}
+
+details{border-bottom:1px solid var(--linea);padding:1rem 0;max-width:46rem}
+summary{cursor:pointer;font:600 1.15rem var(--sans);color:var(--plum);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--rosa-osc)}
+details[open] summary::after{content:"–"}
+details p{margin:.8rem 0 0}
+details .v{color:var(--teal);font-weight:600}
+
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:2rem;margin-top:1.5rem}
+video{width:100%;border-radius:.5rem;background:#000;display:block}
+figure{margin:0}
+figcaption{font-size:.95rem;color:var(--gris);margin-top:.5rem}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem;margin-top:1.5rem}
+.galeria img{width:100%;height:auto;border-radius:.5rem;display:block}
+.autor{font-weight:600;color:#fff;margin-top:1.5rem}
+footer{background:var(--plum);color:#e9cfdc;padding:2.5rem 0;font-size:.98rem}
+footer a{color:#fff}
+footer p{max-width:none}
+
+@media (max-width:760px){
+  .hero .wrap,.dos,.datos{grid-template-columns:1fr}
+  .hero svg{max-width:170px;order:-1;justify-self:start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero svg{animation:none}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Secciones">
+  <div class="wrap">
+    <a href="#que-es">Qué es</a>
+    <a href="#senales">Señales</a>
+    <a href="#riesgo">Factores de riesgo</a>
+    <a href="#deteccion">Detección</a>
+    <a href="#videos">Videos</a>
+    <a href="#mitos">Mitos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#fuentes">Fuentes</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Detectarlo a tiempo cambia el final</h1>
+      <p>El cáncer de mama es el cáncer más frecuente en mujeres. Cuando se encuentra temprano, las probabilidades de curación son mucho mayores. Conocer tu cuerpo y hacerte los controles es la mejor defensa.</p>
+      <a class="btn" href="#deteccion">Cómo detectarlo</a>
+      <p class="autor">Hecho por Genesis Jarelly Urbina Calderon</p>
+    </div>
+    <svg viewBox="0 0 120 150" role="img" aria-label="Lazo rosa, símbolo de la lucha contra el cáncer de mama">
+      <path d="M60 8c-22 0-34 16-30 34 3 14 16 26 30 40 14-14 27-26 30-40 4-18-8-34-30-34z" fill="none" stroke="#d9427a" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M60 82 30 140M60 82l30 58" stroke="#d9427a" stroke-width="13" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+</header>
+
+<main>
+
+<section id="que-es">
+  <div class="wrap">
+    <h2>Qué es el cáncer de mama</h2>
+    <p>Ocurre cuando algunas células de la mama crecen sin control y forman un tumor. Puede empezar en los conductos que llevan la leche o en las glándulas que la producen. Si no se trata, las células pueden extenderse a otras partes del cuerpo.</p>
+    <p>También puede afectar a los hombres, aunque es mucho menos común.</p>
+    <div class="datos">
+      <div><b>2,3 millones</b><span>de mujeres recibieron el diagnóstico en 2022, según la OMS.</span></div>
+      <div><b>1 de cada 8</b><span>mujeres lo desarrollará en su vida, según estimaciones de EE. UU.</span></div>
+      <div><b>Más del 90 %</b><span>de supervivencia a cinco años cuando se detecta en etapa temprana.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="senales" class="tinte">
+  <div class="wrap dos">
+    <div>
+      <h2>Señales de alerta</h2>
+      <p>Muchos cambios en la mama no son cáncer, pero siempre hay que revisarlos. Consulta si notas alguno de estos:</p>
+      <ul class="senales">
+        <li>Un bulto o endurecimiento nuevo en la mama o la axila</li>
+        <li>Cambio en el tamaño o la forma de la mama</li>
+        <li>Piel con hoyuelos, como cáscara de naranja, o enrojecida</li>
+        <li>Pezón hundido o con secreción que no es leche</li>
+        <li>Dolor en una zona que no desaparece</li>
+      </ul>
+    </div>
+    <div id="riesgo">
+      <h2>Factores de riesgo</h2>
+      <p>Tener un factor de riesgo no significa que vayas a enfermar, y no tener ninguno no te protege del todo.</p>
+      <ul class="senales">
+        <li>Edad: el riesgo aumenta con los años</li>
+        <li>Antecedentes familiares de cáncer de mama u ovario</li>
+        <li>Cambios hereditarios en los genes BRCA1 y BRCA2</li>
+        <li>Sobrepeso, sedentarismo y consumo de alcohol</li>
+        <li>Tabaquismo</li>
+      </ul>
+      <div class="aviso"><strong>Importante:</strong> estos factores se pueden reducir en parte con hábitos saludables: moverse, comer bien y evitar el alcohol y el tabaco.</div>
+    </div>
+  </div>
+</section>
+
+<section id="deteccion">
+  <div class="wrap">
+    <h2>Cómo detectarlo a tiempo</h2>
+    <p>La detección temprana combina tres cosas: conocer tu cuerpo, el examen clínico y los estudios de imagen.</p>
+    <div class="dos">
+      <div>
+        <h3>Autoexamen mensual</h3>
+        <ol class="pasos">
+          <li><div><b>Mira</b> frente al espejo, con los brazos abajo y luego arriba. Busca cambios de forma, piel o pezón.</div></li>
+          <li><div><b>Palpa</b> cada mama con las yemas de los tres dedos centrales, haciendo círculos y cubriendo toda la zona hasta la axila.</div></li>
+          <li><div><b>Repite acostada</b>, con una almohada bajo el hombro. También puedes hacerlo en la ducha.</div></li>
+        </ol>
+        <p style="margin-top:1rem">Hazlo siempre en la misma época del ciclo, unos días después de la menstruación.</p>
+      </div>
+      <div>
+        <h3>Controles médicos</h3>
+        <p style="margin-top:1rem"><b>Examen clínico:</b> un profesional revisa las mamas durante los chequeos de rutina.</p>
+        <p><b>Mamografía:</b> radiografía de la mama que puede encontrar tumores muy pequeños, antes de que se sientan. Se recomienda de forma periódica a partir de cierta edad; el médico indica cuándo empezar según cada caso.</p>
+        <div class="aviso"><strong>Recuerda:</strong> el autoexamen no reemplaza a la mamografía ni a la consulta médica. Se complementan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="wrap">
+    <h2>Videos</h2>
+    <div class="videos">
+      <figure>
+        <video controls preload="metadata" aria-label="Video oficial sobre el cáncer de mama"><source src="media/video-oficial.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video>
+        <figcaption>Video oficial</figcaption>
+      </figure>
+      <figure>
+        <video controls preload="metadata" aria-label="Video del ejercicio sobre el cáncer de mama"><source src="media/video-ejercicio.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video>
+        <figcaption>Video del ejercicio</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="mitos" class="tinte">
+  <div class="wrap">
+    <h2>Mitos y realidades</h2>
+    <p>Toca cada afirmación para ver si es cierta.</p>
+    <details>
+      <summary>«Solo las mujeres con familiares enfermos se enferman»</summary>
+      <p><span class="v">Falso.</span> La mayoría de las mujeres con cáncer de mama no tiene antecedentes familiares. Los antecedentes aumentan el riesgo, pero no son necesarios.</p>
+    </details>
+    <details>
+      <summary>«Si no duele, no es cáncer»</summary>
+      <p><span class="v">Falso.</span> Muchos tumores no causan dolor al principio. Un bulto sin dolor igual debe ser revisado.</p>
+    </details>
+    <details>
+      <summary>«Los hombres no tienen cáncer de mama»</summary>
+      <p><span class="v">Falso.</span> Es poco frecuente, pero los hombres también tienen tejido mamario y pueden enfermar.</p>
+    </details>
+    <details>
+      <summary>«Usar desodorante o sostén con aro causa cáncer de mama»</summary>
+      <p><span class="v">Falso.</span> Los estudios científicos no han encontrado relación entre estos productos y el cáncer de mama.</p>
+    </details>
+    <details>
+      <summary>«Un bulto en la mama siempre es cáncer»</summary>
+      <p><span class="v">Falso.</span> La mayoría de los bultos son benignos, como quistes. Aun así, solo un profesional puede confirmarlo.</p>
+    </details>
+  </div>
+</section>
+
+<section id="galeria" class="tinte">
+  <div class="wrap">
+    <h2>Nuestro trabajo</h2>
+    <p>Así preparamos y presentamos el proyecto en clase.</p>
+    <div class="galeria">
+      <figure><img src="media/cartel-etapa-2.jpg" alt="Cartel rosa sobre cáncer de mama en etapa II y prevención" loading="lazy"><figcaption>Cartel: cáncer de mama etapa II y prevención</figcaption></figure>
+      <figure><img src="media/cartel-flores.jpg" alt="Cartel blanco con título dorado y flores y lazos rosados" loading="lazy"><figcaption>Cartel decorado con flores y lazos rosados</figcaption></figure>
+      <figure><img src="media/equipo.jpg" alt="Grupo de estudiantes sosteniendo el cartel en el salón" loading="lazy"><figcaption>El equipo con su cartel</figcaption></figure>
+      <figure><img src="media/preparando-cartel.jpg" alt="Estudiantes preparando el cartel en el salón" loading="lazy"><figcaption>Preparando el cartel</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="fuentes">
+  <div class="wrap">
+    <h2>Si notas algo, consulta</h2>
+    <p>Pide una cita con un médico o acude a un centro de salud. Mientras más pronto, mejores son las opciones de tratamiento. Esta página es informativa y no sustituye la opinión de un profesional de la salud.</p>
+    <p><b>Fuentes consultadas:</b><br>
+      <a href="https://www.who.int/news-room/fact-sheets/detail/breast-cancer" target="_blank" rel="noopener">Organización Mundial de la Salud: cáncer de mama</a><br>
+      <a href="https://www.cancer.org" target="_blank" rel="noopener">American Cancer Society</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Hecho por Genesis Jarelly Urbina Calderon.</p>
+    <p>Proyecto escolar de sensibilización sobre el cáncer de mama. Octubre es el mes internacional de la lucha contra esta enfermedad.</p>
+  </div>
+</footer>
+
+</body>
+</html>
